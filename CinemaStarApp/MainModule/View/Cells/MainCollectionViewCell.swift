@@ -19,7 +19,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
 
     private let filmTitleLabel = {
         let label = UILabel()
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         label.text = "Земля\n" + "⭐️ " + "8,3"
         label.font = .inter(ofSize: 16)
         label.textAlignment = .left
@@ -76,10 +76,11 @@ final class MainCollectionViewCell: UICollectionViewCell {
             filmImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             filmImageView.heightAnchor.constraint(equalToConstant: 200),
 
-            filmTitleLabel.topAnchor.constraint(equalTo: filmImageView.bottomAnchor, constant: 8),
+            filmTitleLabel.topAnchor.constraint(equalTo: filmImageView.bottomAnchor, constant: 4),
             filmTitleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             filmTitleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            filmTitleLabel.heightAnchor.constraint(equalToConstant: 40)
+            filmTitleLabel.heightAnchor.constraint(equalToConstant: 60),
+            filmTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }
