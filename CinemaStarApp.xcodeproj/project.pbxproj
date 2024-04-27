@@ -47,7 +47,19 @@
 		7FF276632BDD3448007FCC1D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF276622BDD3448007FCC1D /* Colors.xcassets */; };
 		7FF276652BDD345D007FCC1D /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF276642BDD345D007FCC1D /* Handler.swift */; };
 		7FF276692BDD39CE007FCC1D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF276682BDD39CE007FCC1D /* KeychainService.swift */; };
+		7FF276952BDD7F2A007FCC1D /* CinemaStarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF276942BDD7F2A007FCC1D /* CinemaStarAppUITests.swift */; };
+		7FF276972BDD7F2A007FCC1D /* CinemaStarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF276962BDD7F2A007FCC1D /* CinemaStarAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FF276982BDD7F2A007FCC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FF275ED2BDD309E007FCC1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FF275F42BDD309F007FCC1D;
+			remoteInfo = CinemaStarApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7FF275F52BDD309F007FCC1D /* CinemaStarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaStarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +103,9 @@
 		7FF276622BDD3448007FCC1D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7FF276642BDD345D007FCC1D /* Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
 		7FF276682BDD39CE007FCC1D /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		7FF276922BDD7F2A007FCC1D /* CinemaStarAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinemaStarAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF276942BDD7F2A007FCC1D /* CinemaStarAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaStarAppUITests.swift; sourceTree = "<group>"; };
+		7FF276962BDD7F2A007FCC1D /* CinemaStarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaStarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +117,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7FF2768F2BDD7F2A007FCC1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF275F72BDD309F007FCC1D /* CinemaStarApp */,
+				7FF276932BDD7F2A007FCC1D /* CinemaStarAppUITests */,
 				7FF275F62BDD309F007FCC1D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF275F52BDD309F007FCC1D /* CinemaStarApp.app */,
+				7FF276922BDD7F2A007FCC1D /* CinemaStarAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,6 +352,15 @@
 			path = SkeletonCells;
 			sourceTree = "<group>";
 		};
+		7FF276932BDD7F2A007FCC1D /* CinemaStarAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7FF276942BDD7F2A007FCC1D /* CinemaStarAppUITests.swift */,
+				7FF276962BDD7F2A007FCC1D /* CinemaStarAppUITestsLaunchTests.swift */,
+			);
+			path = CinemaStarAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,6 +386,24 @@
 			productReference = 7FF275F52BDD309F007FCC1D /* CinemaStarApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7FF276912BDD7F2A007FCC1D /* CinemaStarAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FF2769A2BDD7F2A007FCC1D /* Build configuration list for PBXNativeTarget "CinemaStarAppUITests" */;
+			buildPhases = (
+				7FF2768E2BDD7F2A007FCC1D /* Sources */,
+				7FF2768F2BDD7F2A007FCC1D /* Frameworks */,
+				7FF276902BDD7F2A007FCC1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FF276992BDD7F2A007FCC1D /* PBXTargetDependency */,
+			);
+			name = CinemaStarAppUITests;
+			productName = CinemaStarAppUITests;
+			productReference = 7FF276922BDD7F2A007FCC1D /* CinemaStarAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -365,6 +416,10 @@
 				TargetAttributes = {
 					7FF275F42BDD309F007FCC1D = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					7FF276912BDD7F2A007FCC1D = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 7FF275F42BDD309F007FCC1D;
 					};
 				};
 			};
@@ -385,6 +440,7 @@
 			projectRoot = "";
 			targets = (
 				7FF275F42BDD309F007FCC1D /* CinemaStarApp */,
+				7FF276912BDD7F2A007FCC1D /* CinemaStarAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -398,6 +454,13 @@
 				7FF276632BDD3448007FCC1D /* Colors.xcassets in Resources */,
 				7FF276022BDD30A0007FCC1D /* Assets.xcassets in Resources */,
 				7FF276002BDD309F007FCC1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FF276902BDD7F2A007FCC1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +552,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7FF2768E2BDD7F2A007FCC1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF276952BDD7F2A007FCC1D /* CinemaStarAppUITests.swift in Sources */,
+				7FF276972BDD7F2A007FCC1D /* CinemaStarAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FF276992BDD7F2A007FCC1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FF275F42BDD309F007FCC1D /* CinemaStarApp */;
+			targetProxy = 7FF276982BDD7F2A007FCC1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7FF275FE2BDD309F007FCC1D /* Main.storyboard */ = {
@@ -686,6 +766,38 @@
 			};
 			name = Release;
 		};
+		7FF2769B2BDD7F2A007FCC1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adad.CinemaStarAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CinemaStarApp;
+			};
+			name = Debug;
+		};
+		7FF2769C2BDD7F2A007FCC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = adad.CinemaStarAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CinemaStarApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -703,6 +815,15 @@
 			buildConfigurations = (
 				7FF2760A2BDD30A0007FCC1D /* Debug */,
 				7FF2760B2BDD30A0007FCC1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FF2769A2BDD7F2A007FCC1D /* Build configuration list for PBXNativeTarget "CinemaStarAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FF2769B2BDD7F2A007FCC1D /* Debug */,
+				7FF2769C2BDD7F2A007FCC1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
