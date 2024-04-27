@@ -157,6 +157,9 @@ extension DetailViewController: UITableViewDataSource {
                     .dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier) as? HeaderTableViewCell
                 else { return UITableViewCell() }
                 cell.configure(imageUrl: detailFilm.poster, filmName: detailFilm.name, filmRate: detailFilm.rating)
+                cell.watchButtonClosure = { [weak self] in
+                    self?.showAlert()
+                }
                 return cell
             case .info:
                 guard let cell = detailInfoTableView
