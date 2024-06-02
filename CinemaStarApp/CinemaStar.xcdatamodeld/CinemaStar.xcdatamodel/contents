@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B92" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ActorCD" representedClassName="ActorCD" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="poster" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DetailFilmCD" representedClassName="DetailFilmCD" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="descriptions" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="poster" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="year" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="actors" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ActorCD"/>
+        <relationship name="similarMovies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SimilarMoviesCD"/>
+    </entity>
+    <entity name="FilmData" representedClassName="FilmData" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="poster" optional="YES" attributeType="String"/>
+        <attribute name="query" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SimilarMoviesCD" representedClassName="SimilarMoviesCD" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="poster" optional="YES" attributeType="String"/>
+    </entity>
+</model>
