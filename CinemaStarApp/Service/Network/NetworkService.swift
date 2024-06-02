@@ -29,10 +29,8 @@ final class NetworkService: NetworkServiceProtocol {
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
-    
-    func getMockData() {
-        
-    }
+
+    func getMockData() {}
 
     func getDetailFilm(id: String) -> AnyPublisher<FilmDetailDTO, Error>? {
         guard let url = requestCreator.createDetailRequest(id: id) else { return nil }

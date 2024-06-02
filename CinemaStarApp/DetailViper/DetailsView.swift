@@ -24,6 +24,7 @@ struct DetailsView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {
                                 presenter.isFavorite.toggle()
+                                presenter.saveToFavorite()
                             }) {
                                 Image(
                                     systemName: presenter.isFavorite ? "heart" : "heart.fill"
@@ -171,7 +172,7 @@ struct DetailsView: View {
                                     .frame(width: 170, height: 200)
                             } placeholder: {
                                 ProgressView()
-                                    .frame(width: 170, height: 200)
+                                    .frame(width: 270, height: 300)
                             }
                             Text(film.name)
                                 .font(.system(size: 16))

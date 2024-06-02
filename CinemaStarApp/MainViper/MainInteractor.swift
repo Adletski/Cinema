@@ -49,7 +49,7 @@ final class MainInteractor: MainInteractorProtokol {
                 self.presenter?.stateView = .success
             }
         }
-        
+
         func loadMockData() {
             if let data = MockDataLoader.shared.loadMockData(filename: "mockData") {
                 do {

@@ -17,9 +17,7 @@ protocol DetailPresenterProtocol {
 
 final class DetailPresenter: DetailPresenterProtocol, ObservableObject {
     @Published var isFullDescription: Bool = false
-
     @Published var isTapLookButton: Bool = false
-
     @Published var isFavorite: Bool = false
 
     var router: DetailRouterProtocol?

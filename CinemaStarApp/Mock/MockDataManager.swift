@@ -1,9 +1,5 @@
-//
-//  MockDataManager.swift
-//  CinemaStarApp
-//
-//  Created by Adlet Zhantassov on 02.06.2024.
-//
+// MockDataManager.swift
+// Copyright © RoadMap. All rights reserved.
 
 import Foundation
 
