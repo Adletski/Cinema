@@ -3,8 +3,7 @@
 
 import UIKit
 
-///
-class SkeletonView: UIView {
+final class SkeletonView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()

@@ -11,11 +11,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        if let data = "3AR0DZH-TT3MA8B-H6CAPDJ-FM50BPH".data(using: .utf8) {
-            let _ = KeychainService.shared.save(key: "APIToken", data: data)
+        true
+    }
+
+    func application(
+        _: UIApplication,
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options _: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
+        UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "CinemaStar")
+        container.loadPersistentStores(completionHandler: { _, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
+    func saveContext() {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         }
-//        let keychain = KeychainSwift()
-//        keychain.set("3AR0DZH-TT3MA8B-H6CAPDJ-FM50BPH", forKey: "APIToken")
-        return true
     }
 }

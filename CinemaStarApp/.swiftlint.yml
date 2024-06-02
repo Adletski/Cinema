@@ -240,9 +240,3 @@ custom_rules:
     regex: "(?<!(Map)|(map))(:| =) \\[\\w+: \\w+]( |,|\\))"
     message: "Добавь суффикс Map"
     severity: error
-
-  custom_set_name:
-    name: "Множества должны именоваться с суффиксом Set"
-    regex: "(?<!(Set)|(set))(((: Set<\\w+>(?!\\])([\\s]| *.)))| = Set<)"
-    message: "Добавь суффикс Set"
-    severity: error
