@@ -26,9 +26,9 @@ final class MainInteractor: MainInteractorProtokol {
     }
 
     func fetch() {
-        let cinemaCache = cacheService.fetchFilms(query: query)
+        let cache = cacheService.fetchFilms(query: query)
 
-        if cinemaCache.isEmpty {
+        if cache.isEmpty {
             cancelable = netService.getFetchFilm(query: query)?
                 .sink(receiveCompletion: { [unowned self] complition in
                     switch complition {
@@ -38,16 +38,29 @@ final class MainInteractor: MainInteractorProtokol {
                         presenter?.stateView = .failure
                     }
                 }, receiveValue: { [unowned self] films in
-                    let cinema = films.docs.map { Cinema(cinemaDTO: $0) }
-                    presenter?.films = cinema
+                    let films = films.docs.map { Cinema(cinemaDTO: $0) }
+                    presenter?.films = films
                     presenter?.stateView = .success
-                    cacheService.saveFilms(query: query, films: cinema)
-
+                    cacheService.saveFilms(query: query, films: films)
                 })
         } else {
             DispatchQueue.main.async {
-                self.presenter?.films = cinemaCache
+                self.presenter?.films = cache
                 self.presenter?.stateView = .success
+            }
+        }
+        
+        func loadMockData() {
+            if let data = MockDataLoader.shared.loadMockData(filename: "mockData") {
+                do {
+                    let decoder = JSONDecoder()
+                    let filmsDTO = try decoder.decode(FilmsDTO.self, from: data)
+                    let films = filmsDTO.docs.map { Cinema(cinemaDTO: $0) }
+                    presenter?.films = films
+                    presenter?.stateView = .success
+                } catch {
+                    print("Error decoding mock data: \(error)")
+                }
             }
         }
     }
