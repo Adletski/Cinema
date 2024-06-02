@@ -24,10 +24,9 @@ struct DetailsView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {
                                 presenter.isFavorite.toggle()
-                                presenter.saveToFavorite()
                             }) {
                                 Image(
-                                    systemName: presenter.isFavorite ? "heart" : "heart.fill"
+                                    systemName: presenter.isFavorite ? "heart.fill" : "heart"
                                 )
                             }
                         }
@@ -41,7 +40,7 @@ struct DetailsView: View {
                         shimmer
                     case .success:
                         VStack {
-                            previuFilmView
+                            filmView
                                 .foregroundStyle(.white)
                             lookButtonView
                                 .padding(2)
@@ -50,8 +49,9 @@ struct DetailsView: View {
                                 .padding(.top, 5)
                             moreDataView
                                 .foregroundStyle(.white)
-                        }.padding(.leading, 15)
-
+                        }
+                        .padding(.leading, 15)
+                        .padding(.bottom, 30)
                     case .failure:
                         Text("error")
                     }
@@ -64,7 +64,7 @@ struct DetailsView: View {
         }.ignoresSafeArea()
     }
 
-    private var previuFilmView: some View {
+    private var filmView: some View {
         HStack {
             AsyncImage(url: URL(string: presenter.film?.poster ?? "")) { image in
                 image

@@ -40,4 +40,22 @@ final class DetailPresenter: DetailPresenterProtocol, ObservableObject {
     func popViewController() {
         router?.popToRoot()
     }
+
+    func saveToFavorite() {
+        if let name = film?.name {
+            if FavoritesManager.shareed.favoritesMap[name] == nil {
+                FavoritesManager.shareed.favoritesMap[name] = true
+                isFavorite = true
+            } else {
+                FavoritesManager.shareed.favoritesMap[name] = false
+                isFavorite = true
+            }
+        }
+    }
+}
+
+final class FavoritesManager {
+    public static let shareed = FavoritesManager()
+
+    var favoritesMap: [String: Bool] = [:]
 }

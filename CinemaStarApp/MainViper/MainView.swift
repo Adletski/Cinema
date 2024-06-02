@@ -22,7 +22,7 @@ struct MainView: View {
                 case .loading:
                     shimmer
                 case .success:
-                    collectionView
+                    collectionView.padding(.bottom, 30)
                 case .failure:
                     Text("error")
                 }
